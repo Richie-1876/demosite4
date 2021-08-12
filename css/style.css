@@ -1,0 +1,100 @@
+/*====================================== 
+            Global
+======================================*/
+* {
+  box-sizing: border-box;
+}
+/* #wrapper {
+  width: 90%;
+  margin: 0 auto;
+} */
+body {
+  background-color: lightcoral;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/*====================================== 
+            HEADER
+======================================*/
+#main-header {
+  background-color: cadetblue;
+  height: 100px;
+}
+#logo {
+  height: 100%;
+  width: 25%;
+  border: 1px dashed darkcyan;
+  text-align: center;
+}
+/*====================================== 
+            MAIN NAV
+======================================*/
+#main-nav {
+  /* height: 70px; */
+  background-color: darkcyan;
+}
+#main-nav > ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+#main-nav > ul a {
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  color: black;
+  font-size: 20px;
+}
+#main-nav > ul a:hover {
+  color: white;
+  background-color: rgb(18, 60, 60);
+}
+#main-nav > ul a:active {
+  color: rgb(212, 18, 18);
+}
+#main-nav li {
+  width: 20%;
+  text-align: center;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+}
+.active-page {
+  background-color: rgb(187, 201, 58);
+  color: white;
+}
+/*====================================== 
+            MAIN
+======================================*/
+main {
+  background-color: azure;
+  height: 600px;
+}
+#main-top {
+  height: 50%;
+  /* padding: 15px; */
+  display: flex;
+  flex-direction: row;
+}
+#main-bottom {
+  height: 50%;
+  padding: 15px;
+}
+#top-left {
+  height: 100%;
+  width: 50%;
+  background-color: chartreuse;
+}
+#top-right {
+  height: 100%;
+  width: 50%;
+  background-color: orange;
+}
+/*====================================== 
+            MAIN FOOTER
+======================================*/
+#main-footer {
+  background-color: cadetblue;
+  height: 100px;
+}
