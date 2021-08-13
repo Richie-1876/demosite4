@@ -9,7 +9,7 @@
   margin: 0 auto;
 } */
 body {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -97,4 +97,107 @@ main {
 #main-footer {
   background-color: cadetblue;
   height: 100px;
+}
+/*====================================== 
+            Page 3
+======================================*/
+#box1,
+#box2,
+#box3,
+#box4 {
+  width: 75px;
+  height: 75px;
+  background-color: magenta;
+  margin: 20px;
+  transition: width 2s, height 4s;
+  transition: all 1s;
+  border: 5px solid darkslategrey;
+}
+#boxes {
+  display: flex;
+}
+
+#box1:hover {
+  width: 275px;
+  background-color: blue;
+}
+#box2:hover {
+  height: 275px;
+  opacity: 0.5;
+}
+#box3:hover {
+  width: 300px;
+  background-color: darkslategrey;
+  height: 200px;
+  opacity: 0.5;
+  border: 5px solid magenta;
+}
+#box4:hover {
+  transform: rotateX(180deg) rotateY(180deg) rotateZ(90deg);
+}
+#doggy {
+  transition: all 1s;
+  width: 75px;
+  height: 75px;
+  transform: rotate(45deg);
+}
+#doggy:hover {
+  opacity: 0.5;
+  transform: rotate(360deg) scale(1.5, 1.5);
+  /* transform: scale(1.5, 1.5); */
+}
+#move1 {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 46px;
+  background-color: chartreuse;
+  border-radius: 180px;
+  border: 2px solid red;
+  position: relative;
+  /* animation - name, duration 6 secs, delay 0s, iteration count 3 */
+  animation: mymove2 6s 1s 3;
+  /* animation - name duration 2s infinite */
+  /* animation: mymove2 6s infinite; */
+}
+
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 200px;
+  }
+}
+@keyframes mymove2 {
+  0% {
+    top: 0px;
+    left: 0px;
+    transform: rotate(0deg);
+    background-color: chartreuse;
+  }
+  25% {
+    top: 0px;
+    left: 90%;
+    transform: rotate(90deg);
+    background-color: blue;
+  }
+  50% {
+    top: 200px;
+    left: 90%;
+    transform: rotate(180deg);
+    background-color: red;
+  }
+  75% {
+    left: 0px;
+    top: 200px;
+    transform: rotate(270deg);
+    background-color: yellow;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    transform: rotate(360deg);
+    background-color: chartreuse;
+  }
 }
