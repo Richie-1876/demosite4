@@ -146,7 +146,8 @@ main {
   transform: rotate(360deg) scale(1.5, 1.5);
   /* transform: scale(1.5, 1.5); */
 }
-#move1 {
+#move1,
+#move2 {
   height: 50px;
   width: 50px;
   text-align: center;
