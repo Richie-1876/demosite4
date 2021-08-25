@@ -23,8 +23,88 @@
           <li><a href="page5.html">Link 5</a></li>
         </ul>
       </nav>
-      <main></main>
+      <main>
+        <h1 id="welcome_message">Welcome,</h1>
+        <label>Name</label>
+        <input id="nameBox" placeholder="Enter name" type="text" />
+        <br />
+        <button id="saveName">Save name</button>
+        <br />
+        <button id="clear_Local">Clear name from local storage</button>
+      </main>
+      <input
+        type="text"
+        placeholder="Date of birth"
+        onfocus="(this.type = 'date')"
+      />
       <footer id="main-footer"></footer>
     </div>
+    <script>
+      // let inputBox = document.getElementById("nameBox");
+      let clrLs = document.getElementById("clear_Local");
+      let username = "";
+      let saveName = document
+        .getElementById("saveName")
+        .addEventListener("click", () => {
+          username = document.getElementById("nameBox").value;
+          localStorage.setItem("username", username);
+          update();
+          inputBox.value = "";
+        });
+
+      clrLs.addEventListener("click", () => {
+        localStorage.clear();
+        update();
+      });
+      let welcome = document.getElementById("welcome_message");
+
+      window.onload = () => {
+        update();
+      };
+      function update() {
+        localStorage.getItem("username") != null
+          ? (welcome.innerText = `Welcome, ${localStorage.username}`)
+          : (welcome.innerText = "Welcome ");
+      }
+      console.log(localStorage.username);
+      // this returns undefined
+      console.log(localStorage.somekeythatdoesnt);
+      // this return a null value
+      console.log(localStorage.getItem("somekeythatdoesnt"));
+
+      let stuff = {
+        favFood1: "Pizza",
+        favFood2: "Chips",
+        favFood3: "Nachos",
+      };
+      localStorage.setItem("stuff", JSON.stringify(stuff));
+      console.log(typeof localStorage.getItem("stuff"));
+      console.log(typeof stuff);
+
+      // console.log(JSON.parse(localStorage.getItem("stuff")));
+      let objFromString = JSON.parse(localStorage.stuff);
+      console.log(objFromString);
+
+      for (const key in objFromString) {
+        if (Object.hasOwnProperty.call(objFromString, key)) {
+          console.log(objFromString[key]);
+        }
+      }
+
+      //////////////////////////////////////
+      let person1 = {
+        firstName: "James",
+        lastName: "Jones",
+        age: 34,
+        likesCoding: true,
+        favFoods: ["Pizza", "chops"],
+      };
+      // console.log(JSON.stringify(person1));
+
+      let JSONPerson1 =
+        '{"firstName": "James","lastName": "Jones","age": 34,"likesCoding": true,"favFoods": ["Pizza", "chops"]}';
+      console.log(JSONPerson1);
+      console.log(JSON.parse(JSONPerson1));
+    </script>
   </body>
 </html>

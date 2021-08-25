@@ -23,7 +23,9 @@
           <li><a href="page5.html" class="active-page">Link 5</a></li>
         </ul>
       </nav>
-      <main></main>
+      <main>
+        <button id="clear_local_storage">Click to Clear</button>
+      </main>
       <footer id="main-footer"></footer>
     </div>
     <script>
@@ -54,10 +56,17 @@
       if (location.pathname == "/page5.html") {
         console.log("On page 5");
       }
-      localStorage.setItem("name", "Jane  Doe");
+      localStorage.setItem("name", "Jane Doe");
       localStorage.setItem("age", 24);
       console.log(localStorage.getItem("name"));
       console.log(localStorage.getItem("age"));
+      console.log(`Username is ${localStorage.name}`);
+      console.log(`Username is ${localStorage.getItem("AGE")}`);
+
+      let clearBtn = document.getElementById("clear_local_storage");
+      clearBtn.addEventListener("click", () => {
+        localStorage.clear();
+      });
     </script>
   </body>
 </html>
