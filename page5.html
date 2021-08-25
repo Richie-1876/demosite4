@@ -26,5 +26,38 @@
       <main></main>
       <footer id="main-footer"></footer>
     </div>
+    <script>
+      // The DOM is inside the window model or BOM Browser Object Model
+      // window.alert("Hello!");
+      /*
+      let mainFooter = window.document.getElementById("main-footer");
+      console.log(mainFooter);
+
+      console.log("Window height: " + window.innerHeight);
+      console.log("Window width: " + window.innerWidth);
+      // window.onload = function () {
+      //   alert("Loaded");
+      // };
+      window.addEventListener("resize", function () {
+        if (window.innerWidth < 600) {
+          console.log("Window height: " + window.innerHeight);
+          console.log("Window width: " + window.innerWidth);
+        }
+      });
+      */
+      console.log(window.location);
+      console.log(window.location.href);
+      console.log(window.location.host);
+      console.log(window.location.hostname);
+      console.log(window.location.pathname);
+
+      if (location.pathname == "/page5.html") {
+        console.log("On page 5");
+      }
+      localStorage.setItem("name", "Jane  Doe");
+      localStorage.setItem("age", 24);
+      console.log(localStorage.getItem("name"));
+      console.log(localStorage.getItem("age"));
+    </script>
   </body>
 </html>
